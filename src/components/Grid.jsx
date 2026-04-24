@@ -37,7 +37,7 @@ export function Grid() {
       <img 
         src={catImg} 
         alt="Cat" 
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[86%] w-[85%] md:w-[90%] z-10 drop-shadow-md pointer-events-none" 
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[86%] w-[85%] md:w-[90%] z-30 drop-shadow-md pointer-events-none" 
       />
 
       {/* Badges container */}
