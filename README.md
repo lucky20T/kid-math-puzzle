@@ -1,6 +1,6 @@
 # Just Divide - Kid Math Puzzle 🐱➗
 
-![Just Divide Gameplay](./assets/Game_Play.png) <!-- Add a screenshot link here if available -->
+![Just Divide Gameplay](./src/assets/Game_Play.png)
 
 Welcome to **Just Divide**! An intuitive, drag-and-drop math puzzle game designed to sharpen division skills in a fun, relaxing, and highly interactive environment. Help your cartoon cat buddy solve the board!
 
