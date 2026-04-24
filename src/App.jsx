@@ -64,26 +64,26 @@ function AppContent() {
         <div className="w-full max-w-5xl mx-auto px-4 py-4 md:py-6 flex flex-col items-center flex-grow pt-2 md:pt-4">
           <Header />
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 w-full mt-10 md:mt-16 relative flex-grow max-w-[50rem]">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full mt-10 md:mt-16 relative flex-grow max-w-[50rem]">
             
             {/* Left: Main Grid Area */}
-            <div className="relative z-10 w-[20rem] md:w-[24rem]">
+            <div className="relative z-10 w-[92vw] max-w-[20rem] md:max-w-none md:w-[24rem]">
                <Grid />
             </div>
 
-            {/* Right: Tools Panel (Wooden style) */}
-            <div className="relative z-10 w-32 md:w-36 mt-12 md:mt-0">
-               <div className="bg-[#f0c27b] border-[8px] border-[#d88c42] rounded-[2rem] w-full flex flex-col items-center justify-evenly h-[26rem] md:h-[30rem] shadow-2xl relative py-4">
-                  <div className="absolute inset-0 bg-white/20 rounded-2xl pointer-events-none"></div>
+            {/* Right/Bottom: Tools Panel (Wooden style) */}
+            <div className="relative z-10 w-[95vw] max-w-[24rem] md:max-w-none md:w-36 mt-6 md:mt-0 pb-6 md:pb-0">
+               <div className="bg-[#f0c27b] border-[6px] md:border-[8px] border-[#d88c42] rounded-3xl md:rounded-[2rem] w-full flex flex-row md:flex-col items-center justify-evenly h-28 md:h-[30rem] shadow-2xl relative px-2 md:px-0 py-0 md:py-4">
+                  <div className="absolute inset-0 bg-white/20 rounded-xl pointer-events-none"></div>
                   
-                  <div className="z-10 w-full"><KeepSlot /></div>
+                  <div className="z-10"><KeepSlot /></div>
                   
-                  {/* Queue pill spans wider than the panel */}
-                  <div className="z-20 w-[11.5rem] md:w-[13rem] my-4">
+                  {/* Queue pill logic: spans wider than the panel on desktop, might overlap slightly vertically on mobile */}
+                  <div className="z-20 w-[10rem] sm:w-[11.5rem] md:w-[13rem] mx-1 md:mx-0 md:my-4 transform scale-90 sm:scale-100 md:scale-100">
                     <Queue />
                   </div>
 
-                  <div className="z-10 w-full"><TrashSlot /></div>
+                  <div className="z-10"><TrashSlot /></div>
                </div>
             </div>
 

@@ -14,10 +14,10 @@ export function KeepSlot() {
   const highlightClass = isOver ? 'scale-110 brightness-110' : '';
 
   return (
-    <div className="flex flex-col items-center z-10 w-full pt-4">
+    <div className="flex flex-col items-center z-10">
       <div
         ref={setNodeRef}
-        className={`relative w-[4.5rem] h-[4.5rem] md:w-[5.5rem] md:h-[5.5rem] flex items-center justify-center transition-all ${highlightClass}`}
+        className={`relative w-[4rem] h-[4rem] sm:w-[5rem] sm:h-[5rem] md:w-[6rem] md:h-[6rem] flex items-center justify-center transition-all ${highlightClass}`}
       >
         <img 
           src={placementBoxImg} 
@@ -28,7 +28,7 @@ export function KeepSlot() {
           <StaticTile value={state.keepVal} className="w-[85%] h-[85%] z-10" />
         )}
       </div>
-      <div className="mt-2 text-[#0c7075] font-lilita font-black tracking-widest text-lg drop-shadow-sm">
+      <div className="mt-1 md:mt-2 text-[#0c7075] font-lilita font-black tracking-widest text-sm sm:text-base md:text-lg drop-shadow-sm">
         KEEP
       </div>
     </div>
