@@ -174,10 +174,4 @@ A full breakdown of every feature, design decision, and implementation detail �
 
 ---
 
-### 💬 Key Interview Talking Points
 
-1. **"Why `useReducer` instead of multiple `useState` calls?"** → Game has many interdependent state fields (grid, queue, score, level, trash, undo stack). `useReducer` co-locates all mutation logic, making transitions predictable and easy to test.
-2. **"How does undo work?"** → Immutable snapshot pattern — each action saves the current state into a bounded stack before mutating. Undo simply restores the last snapshot.
-3. **"How did you detect game over?"** → Grid traversal: if no empty cell exists AND no adjacent tile pair satisfies `canMerge()`, the game is deadlocked.
-4. **"How did you handle mobile drag-and-drop?"** → `TouchSensor` with a 100ms activation delay and 5px tolerance prevents accidental triggers during scroll.
-5. **"What was the hardest part?"** → The **chain merge loop** — after a tile divides into a quotient, that quotient may itself be divisible by another neighbour. The `while (hasMerged)` loop in `mergeLogic.js` re-runs until the board is stable.
