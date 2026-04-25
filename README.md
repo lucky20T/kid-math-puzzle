@@ -155,7 +155,6 @@ A full breakdown of every feature, design decision, and implementation detail â€
 |---|---|
 | **Keep Slot** | Stashes the current queue tile. On second use, swaps the kept tile back to the front of the queue. Functions like the "hold" mechanic in Tetris. |
 | **Trash** | Discards the current tile; limited to `trashCount` uses, replenished on level-up. Prevents infinite discarding. |
-| **Hints toggle** | `hintsEnabled` state flag â€” architecture supports highlighting valid drop zones on the grid. |
 | **Pause / Rules** | Opening the Rules modal auto-pauses the game (`TOGGLE_RULES` sets `isPaused: true`). Closing it resumes seamlessly. |
 
 ---
