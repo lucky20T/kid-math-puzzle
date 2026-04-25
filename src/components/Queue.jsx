@@ -1,4 +1,3 @@
-import React from 'react';
 import { useGameLogic } from '../hooks/useGameLogic';
 import { DraggableTile, StaticTile } from './Tile';
 

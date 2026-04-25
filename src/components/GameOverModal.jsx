@@ -1,4 +1,3 @@
-import React from 'react';
 import { useGameLogic } from '../hooks/useGameLogic';
 import { motion, AnimatePresence } from 'framer-motion';
 

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { GameContext } from '../context/GameContext';
+import { GameContext } from '../context/GameContextDef';
 
 export function useGameLogic() {
   const { state, dispatch } = useContext(GameContext);

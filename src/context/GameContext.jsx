@@ -1,8 +1,7 @@
-import React, { createContext, useReducer, useEffect } from 'react';
+import { useReducer, useEffect } from 'react';
+import { GameContext } from './GameContextDef';
 import { getNextTile, isGameOver } from '../utils/helpers';
 import { runMergeLogic } from '../utils/mergeLogic';
-
-export const GameContext = createContext();
 
 const initialState = {
   grid: Array(16).fill(null),

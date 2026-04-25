@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DndContext, DragOverlay, closestCenter, TouchSensor, MouseSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { useGameLogic } from './hooks/useGameLogic';
 import { Header } from './components/Header';
@@ -35,7 +35,7 @@ function AppContent() {
     const { over } = event;
     if (!over) return;
     
-    const { id, data } = over;
+    const { data } = over;
     const type = data.current?.type;
     
     if (type === 'grid') {

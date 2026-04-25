@@ -33,7 +33,7 @@ export function runMergeLogic(grid, startIndex) {
         newGrid[currentPos] = result === 1 ? null : result;
         newGrid[adjPos] = null;
         scoreGained += tileVal;
-        currentPos = currentPos; // stays same
+        // currentPos stays the same — tile reduced in place
         hasMerged = result !== 1; // if null, stop merging
         break;
       } else if (neighborVal % tileVal === 0) {

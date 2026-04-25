@@ -1,4 +1,3 @@
-import React from 'react';
 import { useGameLogic } from '../hooks/useGameLogic';
 import { Pause, HelpCircle, Hourglass } from 'lucide-react';
 

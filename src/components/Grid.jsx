@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDroppable } from '@dnd-kit/core';
 import { StaticTile } from './Tile';
 import { useGameLogic } from '../hooks/useGameLogic';
