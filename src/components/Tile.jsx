@@ -20,9 +20,7 @@ function getTileImage(value) {
   return bgImages[hash % bgImages.length];
 }
 
-function getTextStyle(value) {
-  // To match the image: text is color-coordinated, e.g. red 32 has dark red text outline, or we just use white/bold standard stroke.
-  // The image shows text in dark shadows/gradients. Let's use deep red/black drop shadow on text.
+function getTextStyle() {
   return {
     color: '#a13a28',
     WebkitTextStroke: '1px white'
@@ -46,7 +44,6 @@ export function DraggableTile({ id, value, disabled = false, className = '', dra
   return (
     <motion.div
       ref={setNodeRef}
-      style={style}
       {...listeners}
       {...attributes}
       className={`relative flex items-center justify-center font-lilita text-white rounded-lg select-none touch-none bg-cover bg-center overflow-hidden
@@ -64,7 +61,7 @@ export function DraggableTile({ id, value, disabled = false, className = '', dra
     >
       <span 
         className="text-2xl md:text-3xl font-black pt-1 drop-shadow-md"
-        style={getTextStyle(value)}
+        style={getTextStyle()}
       >
         {value}
       </span>
@@ -88,7 +85,7 @@ export function StaticTile({ value, className = '' }) {
     >
       <span 
         className="text-2xl md:text-3xl font-black pt-1 drop-shadow-md"
-        style={getTextStyle(value)}
+        style={getTextStyle()}
       >
         {value}
       </span>
